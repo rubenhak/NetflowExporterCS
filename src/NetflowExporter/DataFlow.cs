@@ -24,7 +24,7 @@ namespace Rubenhak.NetflowExporter
 
             for (int i = 0; i < _values.Count; i++)
             {
-                var data = NetFlowGenerator.ToBytes(_template[i], _values[i]);
+                var data = BitConverterEx.ToBytes(_template[i], _values[i]);
                 _dataValues.Add(data);
                 _dataLength = (ushort)(_dataLength + data.Length);
             }

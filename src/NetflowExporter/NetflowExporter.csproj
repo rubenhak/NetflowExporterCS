@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataFlow.cs" />
+    <Compile Include="DateHelpers.cs" />
     <Compile Include="ExportPacket.cs" />
     <Compile Include="FieldDefinition.cs" />
     <Compile Include="FieldType.cs" />

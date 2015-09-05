@@ -7,18 +7,8 @@ using System.Threading.Tasks;
 
 namespace Rubenhak.NetflowExporter
 {
-    public static class NetFlowGenerator
+    internal static class BitConverterEx
     {
-        public static uint GetEpoch()
-        {
-            return (uint)(DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds;
-        }
-
-        public static uint GetUpTimeMS()
-        {
-            return (uint)System.Environment.TickCount;
-        }
-
         internal static byte[] ToBytes(FieldDefinition field, object value)
         {
             switch (Type.GetTypeCode(value.GetType()))

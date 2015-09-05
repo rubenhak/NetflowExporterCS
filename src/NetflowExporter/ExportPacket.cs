@@ -35,8 +35,8 @@ namespace Rubenhak.NetflowExporter
             var count = (ushort)_dataFlows.Sum(x => 1 + x.DataCount);
             packet.AddInt16(9); //Version
             packet.AddInt16(count); //Number of Flowsets
-            packet.AddInt32(NetFlowGenerator.GetUpTimeMS()); //sysUpTime
-            packet.AddInt32(NetFlowGenerator.GetEpoch()); // UNIX Secs
+            packet.AddInt32(DateHelpers.GetUpTimeMS()); //sysUpTime
+            packet.AddInt32(DateHelpers.GetEpoch()); // UNIX Secs
             packet.AddInt32(_sequence); // sequence number
             packet.AddInt32(_sourceId); // source id
 
