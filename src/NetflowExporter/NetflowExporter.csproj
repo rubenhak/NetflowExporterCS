@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BitConverterEx.cs" />
     <Compile Include="DataFlow.cs" />
     <Compile Include="DateHelpers.cs" />
     <Compile Include="ExportPacket.cs" />
     <Compile Include="FieldDefinition.cs" />
     <Compile Include="FieldType.cs" />
-    <Compile Include="NetFlowGenerator.cs" />
     <Compile Include="PacketGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemplateData.cs" />
