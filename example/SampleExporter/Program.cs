@@ -24,6 +24,7 @@ namespace Rubenhak.SampleExporter
                     .Field(FieldType.Protocol, 1)
                     .Field(FieldType.InputBytes, 4)
                     .Field(FieldType.InputPackets, 4)
+                    .Field(FieldType.InterfaceName, 65535)
                     ;
 
             var templateData = 
@@ -34,7 +35,8 @@ namespace Rubenhak.SampleExporter
                        (ushort)21,
                        (byte)ProtocolType.Tcp,
                        (UInt32)20*1024,
-                       (UInt32)20
+                       (UInt32)20,
+                       (string)"eni-00d32bc226162f669"
                       )
                 .Data(IPAddress.Parse("192.168.10.67"),
                        IPAddress.Parse("10.12.13.14"),
@@ -42,7 +44,8 @@ namespace Rubenhak.SampleExporter
                        (ushort)21,
                        (byte)ProtocolType.Tcp,
                        (UInt32)15 * 1024,
-                       (UInt32)15
+                       (UInt32)15,
+                       (string)"eni-00d32bc226162f669"
                       )
                       ;
 
